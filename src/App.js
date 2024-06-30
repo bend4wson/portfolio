@@ -13,12 +13,12 @@ function Scene() {
 
   return (
     <>
-      <ambientLight />
-      <pointLight position={[10, 10, 10]} />
-      <mesh position={[0, 0, 0]}>
-        <boxGeometry args={[1, 1, 1]} />
-        <meshStandardMaterial color={'orange'} />
-      </mesh>
+        <ambientLight />
+        <pointLight position={[10, 10, 10]} />
+        <mesh position={[0, 0, 0]}>
+          <boxGeometry args={[1, 1, 1]} />
+          <meshStandardMaterial color={'orange'} />
+        </mesh>
     </>
   );
 }
