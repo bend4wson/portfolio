@@ -1,23 +1,21 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { ScrollControls, Scroll, useScroll } from '@react-three/drei';
 import './App.css';
 
 function Scene() {
-  const ref = useRef();
   const scroll = useScroll();
 
-  useFrame(() => {
+  useFrame(({ camera }) => {
     const offset = scroll.offset;
-    // Example usage of offset: Move the object based on scroll offset
-    ref.current.position.y = offset * 5; // NOTE: Adjust multiplier as needed
+    camera.position.z = offset * 10; // Adjust multiplier as needed
   });
 
   return (
     <>
       <ambientLight />
       <pointLight position={[10, 10, 10]} />
-      <mesh ref={ref} position={[0, 0, 0]}>
+      <mesh position={[0, 0, 0]}>
         <boxGeometry args={[1, 1, 1]} />
         <meshStandardMaterial color={'orange'} />
       </mesh>
