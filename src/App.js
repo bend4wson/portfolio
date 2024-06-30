@@ -1,7 +1,7 @@
 import React from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { ScrollControls, Scroll, useScroll } from '@react-three/drei';
-import Experience from './components/Experience';
+import { Experience } from './components/Experience';
 import './App.css';
 
 
@@ -19,10 +19,6 @@ function Scene() {
    <>
        <ambientLight />
        <pointLight position={[10, 10, 10]} />
-       <mesh position={[0, 0, 0]}>
-         <boxGeometry args={[1, 1, 1]} />
-         <meshStandardMaterial color={'orange'} />
-       </mesh>
    </>
  );
 }
@@ -34,7 +30,7 @@ function App() {
      <Canvas>
        <ScrollControls pages={2}>
          <Scroll>
-           {/* <Scene /> */}
+           <Scene />
            <color attach="background" args={['#ececec']} />
            <Experience />
          </Scroll>

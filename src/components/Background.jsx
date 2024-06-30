@@ -1,7 +1,6 @@
 import { Sphere } from '@react-three/drei';
 import GradientMaterial from './GradientMaterial';
 
-
 import * as THREE from 'three';
 
 
@@ -12,3 +11,5 @@ const Background = () => {
        </Sphere>
    );
 };
+
+export default Background;

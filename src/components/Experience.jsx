@@ -1,5 +1,5 @@
 import { OrbitControls } from "@react-three/drei";
-import { Background } from "./Background";
+import Background from "./Background";
 
 
 export const Experience = () => {
